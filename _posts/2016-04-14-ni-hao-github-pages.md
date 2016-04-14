@@ -1,8 +1,5 @@
 ---
 layout: post
-subtitle: null
-date: ""
-published: true
 title: "Ni Hao, Github Pages"
 ---
 

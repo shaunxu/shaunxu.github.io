@@ -3,7 +3,7 @@ layout: post
 title: "Ni Hao, Github Pages"
 ---
 
-## Ni Hao,
+## Ni Hao!
 
 This is the first post of my blog hosted at Github Pages.
 

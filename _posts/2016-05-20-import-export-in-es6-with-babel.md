@@ -47,7 +47,7 @@ For more information about `Babel.js`, `babel-node` and `Babel-cli` please refer
 ### Traditional CommomJS
 Let's create a very simple application with traditional Node.js modules in `CommonJS` style. Below is `calc.js` file which will be used later.
 
-```js
+```javascript
 'use strict';
 
 exports.name = 'calc';
@@ -67,7 +67,7 @@ exports.divide = (x, y) => {
 
 Below is how we can use it.
 
-```js
+```javascript
 'use strict';
 
 const calc = require('./calc');
@@ -98,7 +98,7 @@ Since it's in ES5 syntax we can simply execute by `node app.js`.
 ES6 `export` works very similar with the way we are using previously. Basically we can use `export` keyword to any variables defined in the module source code. For example, we can export `name` by using `export const name = 'calc';`.
 So this module can be upgrade as below.
 
-```js
+```javascript
 'use strict';
 
 export const name = 'calc';
@@ -122,7 +122,7 @@ export const divide = (x, y) => {
 
 When using this module we need `import` keyword. Similar as `require` we need to specify the path of this module and assign as a variable. Then we can use functions defined in `calc.js` as usual.
 
-```js
+```javascript
 'use strict';
 
 import * as calc from './calc';
@@ -155,7 +155,7 @@ We need use `Babel.js` to compile it to the code Node.js supports and run it by 
 
 In the code below, we use `import * as calc`, which means it will import all variables this module exports, as properties of `calc`. Alternatively we can just import some variables we want and use then as separate variables as below.
 
-```js
+```javascript
 'use strict';
 
 import {name, add, subtract} from './calc';
@@ -177,7 +177,7 @@ console.log(`${x} - ${y} = ${result_subtract}`);
 ### Default Export
 Sometimes we need to export just one variable. In this case we use `export default`. For example, in the code below I wrapped all variables into one object and exported as default.
 
-```js
+```javascript
 'use strict';
 
 export default {
@@ -199,7 +199,7 @@ export default {
 
 Now we can import it into a variable.
 
-```js
+```javascript
 'use strict';
 
 import calc from './calc';
@@ -227,7 +227,7 @@ console.log(`${x} / ${y} = ${result_divide}`);
 Default export is very useful when exporting a class. For example, the code below we defined our `calc.js` as a class and export.
 >Note when exporting a class, do **NOT** append semi-comma at the end of the code.
 
-```js
+```javascript
 'use strict';
 
 export default class Calc {
@@ -256,7 +256,7 @@ export default class Calc {
 
 Below is the code we are using this class.
 
-```js
+```javascript
 'use strict';
 
 import Calc from './calc';
@@ -279,7 +279,7 @@ console.log(`${x} / ${y} = ${result_divide}`);
 ```
 
 ### Summary
-In this post I described the `import` and `export` feature in ES6 and how we are using it in Node.js v6 with `Babel.js`. Basically it doesn't provide meaningful enhancement comparing with the original `CommonJS` module system. But with the upgrade of Node.js and web browsers, this feature should be used widely and replace current `CommonJS` and `AMD` I think.
+In this post I described the `import` and `export` feature in ES6 and how we are using it in Node.```javascript v6 with `Babel.js`. Basically it doesn't provide meaningful enhancement comparing with the original `CommonJS` module system. But with the upgrade of Node.js and web browsers, this feature should be used widely and replace current `CommonJS` and `AMD` I think.
 
 Hope this helps,
 Shaun

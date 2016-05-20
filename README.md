@@ -1,7 +1,3 @@
-### IMPORTANT NOTE
-
-#### During February/March 2016 I will be extremely busy trying to write my thesis, so please do not send me private emails asking for personal help. Help me graduate :)
-
 # Beautiful Jekyll
 
 **Beautiful Jekyll** is a ready-to-use template to help you create an awesome website quickly. Perfect for personal blogs or simple project websites.  [Check out a demo](http://deanattali.com/beautiful-jekyll) of what you'll get after just two minutes.  You can look at [my personal website](http://deanattali.com) to see it in use, or see examples of websites other people created using this theme [here](#featured-users).
@@ -172,6 +168,7 @@ Want your website featured here? [Contact me](http://deanattali.com/aboutme#cont
 | [blabel.github.io](http://blabel.github.io) | Library for canonicalising blank node labels in RDF graphs |
 | [organicrails.github.io](http://organicrails.github.io) | Ruby on Rails tutorial |
 | [esentire.github.io](https://esentire.github.io) | Blog about threats and malware | 
+| [reactionic.github.io](http://reactionic.github.io) | Create iOS and Android apps with React and Ionic |
 
 #### Personal websites
 
@@ -181,11 +178,12 @@ Want your website featured here? [Contact me](http://deanattali.com/aboutme#cont
 | [ouzor.github.io](http://ouzor.github.io) | Juuso Parkkinen | Data scientist |
 | [derekogle.com](http://derekogle.com/) | Derek Ogle | Professor of Mathematical Sciences and Natural Resources |
 | [tomwhite.io](http://tomwhite.io) | Thomas White | Ecology PhD student |
-| [rikosjett.no](http://rikosjett.no) | Ronnie André Bjørvik Sletta | I'm not sure, his website is in Norwegian... |
 | [trappmartin.github.io](http://trappmartin.github.io) | Martin Trapp | Machine learning researcher |
-| [selimsalihovic.github.io](http://selimsalihovic.github.io/) | Selim Salihovic | Software Developer |
 | [melyanna.github.io](http://melyanna.github.io/) | Melyanna | Shows off her nice art |
 | [chaitanyajoshi.xyz](http://chaitanyajoshi.xyz/) | Chaitanya Joshi | Computer Science undergrad |
+| [chauff.github.io](http://chauff.github.io/) | Claudia Hauff | Professor at Delft University of Technology |
+| [kootenpv.github.io](http://kootenpv.github.io/) | Pascal van Kooten | Data analytics |
+
 
 ### Very advanced: Local development
 

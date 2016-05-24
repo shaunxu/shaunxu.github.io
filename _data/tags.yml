@@ -1,0 +1,23 @@
+- slug: misc
+  name: Miscellaneous
+
+- slug: nodejs
+  name: Node.js
+
+- slug: azure
+  name: Microsoft Azure
+
+- slug: angularjs
+  name: Angular.js
+
+- slug: cloud
+  name: Cloud Computing
+
+- slug: architecture
+  name: Architecture
+
+- slug: web
+  name: Web Application
+
+- slug: mongodb
+  name: MongoDB

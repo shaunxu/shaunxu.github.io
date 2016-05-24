@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Import & Export in ES6 with Node.js & Babel.js"
+tags: [nodejs]
 ---
 
 ES6 introduced a new way to organize modules. It's different from `CommonJS` and `AMD` we are currently using, which through the new keywords `import` and `export`. It still **NOT** being supported by the latest version of Node.js. But fortunately we can leverage `Babel.js` to play it right now.

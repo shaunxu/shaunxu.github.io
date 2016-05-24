@@ -34,8 +34,8 @@ layout: page
     {% endif %}
 
     <p class="post-meta">
-      <div>Posted on {{ post.date | date: "%B %-d, %Y" }}</div>
-      <div>{{ tags_content }}</div>
+        <span>Posted on {{ post.date | date: "%B %-d, %Y" }}</span>
+        <span style="float: right; margin-right: 40px;">{{ tags_content }}</span>
     </p>
 
     <div class="post-entry">

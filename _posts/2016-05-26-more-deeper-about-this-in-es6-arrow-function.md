@@ -48,7 +48,11 @@ The method defined in traditional way worked as we expected, but the arrow funct
 
 The reason is, different from traditional function, `this` in an arrow function is **NOT** a variable. In [MDN document](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions), `this` arrow function is **lexical**. What that mean is, when we define an arrow function, `this` value will be assigned based on where the arrow function was defined, rather than what it will be assigned later when the application was running. `this` in arrow function works more like a constant, rather than a variable. The value of a constant was being decided based on the code, rather than the runtime assignment.
 
-~~The code below partially explained what `this` works in an arrow function.
+### Update 2016-06-12
+
+_Thanks to [nelsonlaquet](https://github.com/nelsonlaquet/) who pointed me the example below is **NOT** correct. I created a gist as better example and please refer the [comments below](http://blog.shaunxu.me/2016-05-26-more-deeper-about-this-in-es6-arrow-function/#comment-2702277629)._
+
+The code below partially explained what `this` works in an arrow function.
 
 ```javascript
 const wrapper = {

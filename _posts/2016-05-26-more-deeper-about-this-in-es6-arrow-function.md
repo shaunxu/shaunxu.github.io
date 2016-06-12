@@ -50,7 +50,7 @@ The reason is, different from traditional function, `this` in an arrow function 
 
 ### Update 2016-06-12
 
-_Thanks to [nelsonlaquet](https://github.com/nelsonlaquet/) who pointed me the example below is **NOT** correct. I created a gist as better example and please refer the [comments below](http://blog.shaunxu.me/2016-05-26-more-deeper-about-this-in-es6-arrow-function/#comment-2702277629)._
+>Thanks to [nelsonlaquet](https://github.com/nelsonlaquet/) who pointed me the example below is **NOT** correct. I created a gist as better example and please refer the [comments below](http://blog.shaunxu.me/2016-05-26-more-deeper-about-this-in-es6-arrow-function/#comment-2702277629).
 
 The code below partially explained what `this` works in an arrow function.
 

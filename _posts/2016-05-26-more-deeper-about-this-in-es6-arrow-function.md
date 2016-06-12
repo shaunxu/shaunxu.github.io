@@ -8,7 +8,7 @@ When I'm developing [Worktile Pro](https://pro.worktile.com) with ES6 and ES7, a
 
 Let's have a look on the sample code below. Here I have a module exports two method, one was defined in arrow function, the other was in traditional function.
 
-```js
+```javascript
 // arrow-fn-and-this.js
 'use strict';
 
@@ -23,7 +23,7 @@ exports.normalFn = function () {
 
 Below is how I was using it.
 
-```js
+```javascript
 // app.js
 'use strict';
 
@@ -48,9 +48,9 @@ The method defined in traditional way worked as we expected, but the arrow funct
 
 The reason is, different from traditional function, `this` in an arrow function is **NOT** a variable. In [MDN document](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions), `this` arrow function is **lexical**. What that mean is, when we define an arrow function, `this` value will be assigned based on where the arrow function was defined, rather than what it will be assigned later when the application was running. `this` in arrow function works more like a constant, rather than a variable. The value of a constant was being decided based on the code, rather than the runtime assignment.
 
-The code below partially explained what `this` works in an arrow function.
+~~The code below partially explained what `this` works in an arrow function.
 
-```js
+```javascript
 const wrapper = {
     fn: () => {
         // `this` was defined as the enclosing context, which is `wrapper`, as a constant
@@ -68,7 +68,7 @@ fn = () => {
 
 But in traditional function, `this` is just a variable which can be assigned in runtime. It works like this.
 
-```js
+```javascript
 const wrapper = {
     fn: function () {
         var this = retrieve_this_magically(thisArg);
@@ -77,7 +77,7 @@ const wrapper = {
 }
 ```
 
-When invoking function through `object.method` approach, `retrieve_this_magically` will be the `object` and assigned to `this`. When using `Function.prototype.bind`, `Function.prototype.apply` and `Function.prototype.call`, it will assign `this` based the first parameter of `bind`, `apply` and `call`.
+When invoking function through `object.method` approach, `retrieve_this_magically` will be the `object` and assigned to `this`. When using `Function.prototype.bind`, `Function.prototype.apply` and `Function.prototype.call`, it will assign `this` based the first parameter of `bind`, `apply` and `call`.~~
 
 So to be summary, arrow function is great and it reduce the complexity of our code. But when using arrow function, pay attention to its **lexical** variables:
 - arguments

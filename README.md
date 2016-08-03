@@ -122,7 +122,7 @@ subtitle    | Short description of page or blog post that goes under the title
 bigimg      | Include a large full-width image at the top of the page.  You can either give the path to a single image, or provide a list of images to cycle through (see [my personal website](http://deanattali.com/) as an example).
 comments    | If you want do add Disqus comments to a specific page, use `comments: true`. Comments are automatically enabled on blog posts; to turn comments off for a specific post, use `comments: false`. Comments only work if you set your Disqus id in the `_config.yml` file.
 show-avatar | If you have an avatar configured in the `_config.yml` but you want to turn it off on a specific page, use `show-avatar: false`. If you want to turn it off by default, locate the line `show-avatar: true` in the file `_config.yml` and change the `true` to `false`; then you can selectively turn it on in specific pages using `show-avatar: true`.
-fb-img      | If you want to share a page on Facebook, by default Facebook will use the first image it can find on the page.  If you want to specify an image to use when sharing the page on Facebook, then provide the image's URL here
+share-img   | If you want to specify an image to use when sharing the page on Facebook or Twitter, then provide the image's full URL here.
 layout      | What type of page this is (default is `blog` for blog posts and `page` for other pages. You can use `minimal` if you don't want a header and footer)  
 js          | List of local JavaScript files to include in the page (eg. `/js/mypage.js`)
 ext-js      | List of external JavaScript files to include in the page (eg. `//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js`)
@@ -150,7 +150,7 @@ I wrote [a blog post](http://deanattali.com/2015/03/12/beautiful-jekyll-how-to-b
 
 ### Featured users (success stories!)
 
-To my huge surprise, Beautiful Jekyll has been used in over 500 websites in its first 6 months. Here is a hand-picked selection of some websites that use Beautiful Jekyll.
+To my huge surprise, Beautiful Jekyll has been used in over 500 websites in its first 6 months alone! Here is a hand-picked selection of some websites that use Beautiful Jekyll.
 
 Want your website featured here? [Contact me](http://deanattali.com/aboutme#contact) to let me know about your website.
 
@@ -164,9 +164,9 @@ Want your website featured here? [Contact me](http://deanattali.com/aboutme#cont
 | [joecks.github.io/clipboard-actions](http://joecks.github.io/clipboard-actions/) | Clipboard Actions - an Android app |
 | [embedded.guide](http://embedded.guide) | Writing an Embedded OS |
 | [blabel.github.io](http://blabel.github.io) | Library for canonicalising blank node labels in RDF graphs |
-| [organicrails.github.io](http://organicrails.github.io) | Ruby on Rails tutorial |
-| [esentire.github.io](https://esentire.github.io) | Blog about threats and malware | 
 | [reactionic.github.io](http://reactionic.github.io) | Create iOS and Android apps with React and Ionic |
+| [ja2-stracciatella.github.io](http://ja2-stracciatella.github.io) | Jagged Alliance 2 Stracciatella |
+| [PatientOutcomeFunding.org](http://www.patientoutcomefunding.org/) | Patient Outcome Funding |
 
 #### Personal websites
 
@@ -175,17 +175,16 @@ Want your website featured here? [Contact me](http://deanattali.com/aboutme#cont
 | [deanattali.com](http://deanattali.com) | Dean Attali | Creator of Beautiful Jekyll |
 | [ouzor.github.io](http://ouzor.github.io) | Juuso Parkkinen | Data scientist |
 | [derekogle.com](http://derekogle.com/) | Derek Ogle | Professor of Mathematical Sciences and Natural Resources |
-| [tomwhite.io](http://tomwhite.io) | Thomas White | Ecology PhD student |
 | [trappmartin.github.io](http://trappmartin.github.io) | Martin Trapp | Machine learning researcher |
 | [melyanna.github.io](http://melyanna.github.io/) | Melyanna | Shows off her nice art |
-| [chaitanyajoshi.xyz](http://chaitanyajoshi.xyz/) | Chaitanya Joshi | Computer Science undergrad |
 | [chauff.github.io](http://chauff.github.io/) | Claudia Hauff | Professor at Delft University of Technology |
 | [kootenpv.github.io](http://kootenpv.github.io/) | Pascal van Kooten | Data analytics |
 | [sjackman.ca](http://sjackman.ca) | Shaun Jackman | PhD candidate in bioinformatics |
+| [epwalsh.fyi](https://epwalsh.fyi) | Evan Pete Walsh | PhD candidate (Statistics and Mathematics) at Iowa State University |
 
 ### Very advanced: Local development
 
-Beautiful Jekyll is meant to be so simple to use that you can do it all within the browser. However, if you'd like to develop locally on your own machine, that's possible too if you're comfortable with command line. Folow these simple steps to do that with Vagrant:
+Beautiful Jekyll is meant to be so simple to use that you can do it all within the browser. However, if you'd like to develop locally on your own machine, that's possible too if you're comfortable with command line. Follow these simple steps to do that with Vagrant:
 
 1. Install [VirtualBox](http://virtualbox.org) and [Vagrant](https://www.vagrantup.com)
 2. Clone your fork `git clone git@github.com:yourusername/yourusername.github.io.git`
@@ -194,6 +193,8 @@ Beautiful Jekyll is meant to be so simple to use that you can do it all within t
 5. Commit any changes and push everything to the master branch of your GitHub repository. GitHub Pages will then rebuild and serve your website automatically.
 
 Disclaimer: I personally am NOT using local development so I don't know much about running Jekyll locally. If you follow this route, please don't ask me questions because unfortunately I honestly won't be able to help!
+
+Additionally, if you choose to deploy Jekyll using a local ruby installation, you can tell Jekyll to automatically categorize your blog posts by tags. You just need to set `link-tags: true` in `_config.yml`. Jekyll will then generate a new page for each unique tag which lists all of the posts that belong to that tag.
 
 ### Credits
 

@@ -45,7 +45,7 @@
           {% endif %}
 		  {% if site.author.linkedin and site.footer-links-active.linkedin %}
           <li>
-            <a href="https://linkedin.com/{{ site.author.linkedin }}" title="LinkedIn">
+            <a href="https://linkedin.com/in/{{ site.author.linkedin }}" title="LinkedIn">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -59,6 +59,16 @@
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+      {% if site.author.instagram and site.footer-links-active.instagram %}
+          <li>
+            <a href="https://www.instagram.com/{{ site.author.instagram }}" title="Instagram">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
               </span>
             </a>
           </li>

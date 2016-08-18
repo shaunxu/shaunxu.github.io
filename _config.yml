@@ -24,10 +24,9 @@ description: The Sheep-Pen of the Shaun.
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Original Posts: "http://www.geekswithblog.net/shaunxu"
-    - Worktile: "https://worktile.com/"
-    - GitHub: "https://github.com/shaunxu"
+  Worktile: "https://worktile.com/"
+  Original Blog: "http://www.geekswithblogs.net/shaunxu"
+  GitHub: "https://github.com/shaunxu"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar

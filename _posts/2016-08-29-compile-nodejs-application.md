@@ -31,15 +31,15 @@ console.log(`This application was compiled from Node.js to binary by ${name}.`);
 
 Then ran command `./node_modules/.bin/nexe -i ./app.js -o ./app`. If this is the first time we use `nexe`, it will download Node.js source code in `./tmp` folder, compile Node.js along with out code. This might take 10 - 20 minutes. At the end we will find a file named `app` was created.
 
-![001.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/001.jpg)
+![001.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/001.png)
 
 Now we can execute this file, which is compiled from our Node.js source code.
 
-![002.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/002.jpg)
+![002.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/002.png)
 
 If we tried to view the content of this file we can see it's in binary mode.
 
-![003.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/003.jpg)
+![003.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/003.png)
 
 ### How `nexe` Works
 
@@ -47,7 +47,7 @@ If you are familiar with Node.js you might already know that there are some wrap
 
 `nexe` leverage this feature. When we ran `nexe` it will firstly download the source code of Node.js (if not found in its temporary folder) into `./tmp` folder. Then `nexe` will read our code file the entry file we specified from the command-line `-i` argument. Based on the `require` statement we wrote, `nexe` will find all dependency files and put all of them into a file named under Node.js source code it downloaded `./tmp/nodejs/latest/node-vN.N.N/lib/nexe.js`. Finally `nexe` will start to compile Node.js from `./tmp` folder. Since all our code (with dependencies) are injected into `./lib/nexe.js`, Node.js will treat it as one of build-in wrappers (as same `fs`, `http`, `os`) and compiled into Node.js binary.
 
-![004.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/004.jpg)
+![004.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/004.png)
 
 Let's add a dependency file as below.
 
@@ -76,7 +76,7 @@ console.log(`This application was compiled from Node.js to binary by ${name}.`);
 
 Compile the source code `./node_modules/.bin/nexe -i ./app.js -o ./app` and execute it.
 
-![005.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/005.jpg)
+![005.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/005.png)
 
 Let's have a look on `nexe.js` file `nexe` created. Since I'm using the latest Node.js version to compile, in this case it's located at `./tmp/nexe/nodejs/latest/node-v6.4.0/lib/nexe.js`.
 
@@ -102,7 +102,7 @@ exports.getName = function () {
 
 We can see that `app.js` and `dependency.js` are all copied into this file with some additional code `nexe.js` generated.
 
-![006.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/006.jpg)
+![006.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/006.png)
 
 ### Passthrough Application Argument
 
@@ -122,11 +122,11 @@ exports.getName = function () {
 
 Then we can use `node ./app.js --name=Shaun` to specify the value of `name` as below.
 
-![007.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/007.jpg)
+![007.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/007.png)
 
 But if we compiled the code and execute `./app --name=Shaun` it will raise an error.
 
-![008.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/008.jpg)
+![008.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/008.png)
 
 This is because, `nexe` put our code into Node.js source tree and complile it. In fact when we were running `./app` we were running a special version of Node.js contains our code, and our argument `--name` was accepted by Node.js rather than our application.
 
@@ -134,13 +134,13 @@ To let Node.js passthrough the command-line argument into our code, we just need
 
 Now it works as expected when `./app --name=Shaun`.
 
-![009.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/009.jpg)
+![009.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/009.png)
 
 ### Exclude Required Modules
 
 In the sample code above I added `require('minimist')` in `denpendency.js`. If we opened the generated file `nexe.js` we will find the source of `minimist` was also be copied.
 
-![010.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/010.jpg)
+![010.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/010.png)
 
 We want to compile our source code, but in most cases we don't want to compile node modules we added as well. In this case we can exclude them by passing a variant to `require` function rather than a string. For exmaple we can change `dependency.js` file from `require('minimist')` to `const minimist = 'minimist'` and then `require(minimist)`;
 
@@ -159,7 +159,7 @@ exports.getName = function () {
 
 Then compile the code and the source of `minimist` was excluded.
 
-![011.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/011.jpg)
+![011.png]({{site.baseurl}}/img/2016-08-29-compile-nodejs-application/011.png)
 
 Beside using variant as required module name, we can change `require` to `global.require`. This will also exclude the module from compiling.
 

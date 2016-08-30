@@ -182,7 +182,8 @@ exports.getName = function () {
 In this post I introduced how to compile Node.js code into binary by using [nexe](https://jaredallard.me/nexe/). Basically `nexe` join our code as well as all required files into `nexe.js` inside the source of Node.js and compile it. Then our code changed to be part of Node.js binary. I also explain how to passthrough the commmand-line into our application, and how to exclude module we don't want to compile.
 
 Hope this helps,
+
 Shaun
 
->All documents and related graphics, codes are provided "AS IS" without warranty of any kind. 
+>All documents and related graphics, codes are provided "AS IS" without warranty of any kind.
 >Copyright © Shaun Xu. This work is licensed under the [Creative Commons License](https://creativecommons.org/licenses/by/3.0/).

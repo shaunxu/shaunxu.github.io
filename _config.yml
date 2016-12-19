@@ -32,6 +32,10 @@ navbar-links:
 # Remove this parameter if you don't want an image in the navbar
 avatar: "/img/shaunxu.jpg"
 
+# If you want to have an image logo in the top-left corner instead of the title text,
+# then specify the following parameter
+# title-img: /path/to/image
+
 # --- Footer options --- #
 
 # Change all these values or delete the ones you don't want.
@@ -65,12 +69,18 @@ share-links-active:
 # url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
-
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
 disqus: "shaunxu"
 
 # Fill in your Google Analytics ID to track your website using GA
 google_analytics: "UA-27945381-1"
+
+# Facebook App ID
+# fb_app_id: ""
+
+# Excerpt Word Length
+# Truncates the excerpt to the specified number of words on the index page
+excerpt_length: 50
 
 # --- Don't need to touch anything below here (but you can if you want) --- #
 

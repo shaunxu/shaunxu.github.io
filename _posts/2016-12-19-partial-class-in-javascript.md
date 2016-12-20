@@ -30,7 +30,7 @@ HugeClass.prototype.method2 = function () {
 module.exports = HugeClass;
 ```
 
-Now I would like to move method `huge1` into `huge.partial-1.js`, but also has it defined in `Huge` class. `huge.partial-1.js` would be like this.
+Now I would like to move method `method1` into `huge.partial-1.js`, but also has it defined in `Huge` class. `huge.partial-1.js` would be like this.
 
 ```javascript
 // huge.partial-1.js

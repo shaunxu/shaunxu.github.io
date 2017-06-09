@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Studio 3T (MongoChef), My "Swiss Army Knife" for MongoDB"
+title: "Studio 3T (MongoChef), My 'Swiss Army Knife' for MongoDB"
 tags: [mongodb, tools]
 ---
 
